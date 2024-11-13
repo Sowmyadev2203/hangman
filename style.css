@@ -1,0 +1,324 @@
+body {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  min-height: 100vh;
+  background: hsla(214, 92%, 47%, 1);
+  background: linear-gradient(45deg, hsla(214, 92%, 47%, 1) 30%, hsla(231, 85%, 24%, 1) 87%);
+  background: -moz-linear-gradient(45deg, hsla(214, 92%, 47%, 1) 30%, hsla(231, 85%, 24%, 1) 87%);
+  background: -webkit-linear-gradient(45deg, hsla(214, 92%, 47%, 1) 30%, hsla(231, 85%, 24%, 1) 87%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0968E5", endColorstr="#091970", GradientType=1 );
+}
+.navdiv{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content:right;
+  margin-right: 30px;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.navdiv a:hover{
+  background: hsla(214, 92%, 47%, 1);
+  background: linear-gradient(45deg, hsla(214, 92%, 47%, 1) 30%, hsla(231, 85%, 24%, 1) 87%);
+  background: -moz-linear-gradient(45deg, hsla(214, 92%, 47%, 1) 30%, hsla(231, 85%, 24%, 1) 87%);
+  background: -webkit-linear-gradient(45deg, hsla(214, 92%, 47%, 1) 30%, hsla(231, 85%, 24%, 1) 87%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0968E5", endColorstr="#091970", GradientType=1 );
+  padding: 6px;
+  border-radius: 5px;
+  color: aliceblue;
+}
+
+.he{
+  position: absolute;
+  top:-6px;
+  left: 120px;
+}
+.svg{
+  position: absolute;
+  top: 4px;
+  height: 50px;
+  width: 80px;
+  margin-left: 20px;
+  border:2px solid black;
+  border-radius: 50px;
+} 
+.nav{
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  background-color: white;
+  top: 0px;
+  border-radius: 7px;
+}
+.container {
+  height: 368px;
+  width: 430px;
+  background-color:aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 40px;
+  border-radius: 10px;
+  /* gap: px; */
+
+}
+.container2 {
+  height: 264px;
+  width: 425px;
+  background-color:aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 70px; */
+  padding: 60px 60px;
+  border-radius: 10px;
+}
+.word-display {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.word-display .letter {
+  width: 28px;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 3px solid black;
+}
+.word-display .letter.guessed {
+  border-color: transparent;
+  margin: -40px 0 35px;
+}
+.game-box h4 {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.game-box h4 b {
+  font-weight: 600;
+}
+.game-box .guesses-text b {
+  color: red;
+}
+.game-box .keyboard {
+  display: flex;
+  gap: 5px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+:where(.game-model, .keyboard)button {
+  color: aliceblue;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: rgb(100, 100, 209);
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.keyboard button {
+  padding: 7px;
+  border-radius: 10px;
+  color: aliceblue;
+  background-color: rgb(100, 100, 209);
+  width: calc(100% / 9 - 5px);
+}
+:where(.game-model, .keyboard) button:hover {
+  background-color: rgb(172, 172, 222);
+}
+.game-modal {
+  position: fixed;
+  left:750px;
+  top: 160px;
+  width: 100%;
+  height: 100px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  /* opacity: 80%; */
+  /* background-color:black; */
+}
+.game-modal .content {
+  background-color:aliceblue;
+  color: rgb(7, 8, 8);
+  max-width: 495px;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  padding: 30px;
+}
+.game-modal h4 {
+  font-size: 1.53rem;
+}
+.game-modal img {
+  max-width: 130px;
+  margin-bottom: 20px;
+}
+.game-modal p {
+  font-size: 1.15rem;
+  margin: 15px 0 30px;
+  font-weight: 500;
+}
+.game-modal p b {
+  color: blueviolet;
+  font-weight: 600px;
+}
+.game-modal button {
+  padding: 12px 23px;
+  background-color: aqua;
+  border-radius: 10px;
+}
+
+
+
+.hangman_container {
+    margin-top: 50px;
+}
+
+.hangman {
+    width: 250px;
+    height: 250px;
+    border-top: 5px solid #000;
+    border-left: 5px solid #000;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hangman::before {
+    content: '';
+    width: 5px;
+    height: 90px;
+    background-color: #000;
+    border-left: 2px solid #000;
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    transform: rotate(52deg);
+}
+
+.hangman::after {
+    content: '';
+    width: 20px;
+    height: 5px;
+    background-color: #000;
+    border-left: 2px solid #000;
+    position: absolute;
+    top: 7px;
+    left: 125px;
+    transform: rotate(90deg);
+}
+.head {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    position: absolute;
+    top: 19px;
+    left: 110px;
+    /* display: none; */
+}
+
+.body {
+    width: 3px;
+    height: 90px;
+    background-color: #000;
+    position: absolute;
+    left: 133px;
+    top: 68px;
+    /* display: none; */
+}
+
+.left_hand {
+    width: 2px;
+    height: 50px;
+    background-color: #000;
+    position: absolute;
+    transform: rotate(35deg);
+    top: 80px;
+    left: 120px;
+    /* display: none; */
+}
+
+.right_hand {
+    width: 2px;
+    height: 50px;
+    background-color: #000;
+    position: absolute;
+    transform: rotate(-35deg);
+    top: 82px;
+    left: 149px;
+    /* display: none; */
+}
+
+.left_leg {
+    width: 3px;
+    height: 70px;
+    background-color: #000;
+    position: absolute;
+    transform: rotate(25deg);
+    top: 150px;
+    left: 118px;
+    /* display: none; */
+}
+
+.right_leg {
+    width: 3px;
+    height: 70px;
+    background-color: #000;
+    position: absolute;
+    transform: rotate(-25deg);
+    top: 150px;
+    left: 148px;
+    /* display: none; */
+}
+
+
+
+
+
+
+
+
+
+
+@media  (max-width: 768px)    {
+  .container {
+    flex-direction: column;
+    padding: 30px 15px;
+    align-items: center;
+  }
+.container2 {
+    flex-direction: column;
+    /* padding: 30px 15px; */
+    align-items: center;
+  }
+
+.hangman-box img {
+  max-width: 200px;
+}
+.hangman-box h1 {
+  display: none;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  padding: 30px 15px;
+}
+.game-modal {
+  position: fixed;
+  left:150px;
+}
+}
