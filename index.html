@@ -1,185 +1,132 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hangman Game</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+
+.he{
+  position: absolute;
+  top:-6px;
+  left: 170px;
+}
+.svg{
+  position: absolute;
+  top: 10px;
+  height: 50px;
+  width: 90px;
+  margin-left: 50px;
+  border:2px solid black;
+  border-radius: 50px;
+} 
+.nav{
+   /* position: fixed; */
+  height: 60px;
+  width: 100%;
+  background-color: white;
+  margin-bottom: 30px;
+  margin-left: auto;
+  border-radius: 7px;
+
+}
+body {
+  padding: 0 10px;
+  min-height: 100vh;
+  background: hsla(214, 92%, 47%, 1);
+  background: linear-gradient(45deg, hsla(214, 92%, 47%, 1) 30%, hsla(231, 85%, 24%, 1) 87%);
+  background: -moz-linear-gradient(45deg, hsla(214, 92%, 47%, 1) 30%, hsla(231, 85%, 24%, 1) 87%);
+  background: -webkit-linear-gradient(45deg, hsla(214, 92%, 47%, 1) 30%, hsla(231, 85%, 24%, 1) 87%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0968E5", endColorstr="#091970", GradientType=1 );
+}
+button {
+      border-radius: 10px;
+      padding: 10px;
+      width: 150px;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+ }
+
+.div2{
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   
+}
+.navdiv{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content:right;
+  margin-right: 30px;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.navdiv a:hover{
+  background: hsla(214, 92%, 47%, 1);
+  background: linear-gradient(45deg, hsla(214, 92%, 47%, 1) 30%, hsla(231, 85%, 24%, 1) 87%);
+  background: -moz-linear-gradient(45deg, hsla(214, 92%, 47%, 1) 30%, hsla(231, 85%, 24%, 1) 87%);
+  background: -webkit-linear-gradient(45deg, hsla(214, 92%, 47%, 1) 30%, hsla(231, 85%, 24%, 1) 87%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0968E5", endColorstr="#091970", GradientType=1 );
+  padding: 6px;
+  border-radius: 5px;
+  color: aliceblue;
+}
+.footer{
+  display: flex;
+  /* margin-top: 400px; */
+  margin: 30px 0px 0px 650px;
+  color: aliceblue;
+}
+.bigimg{
+  height: 300px;
+  width: 300px;
+  margin:  50px 0px 0px 600px;
+  border-radius: 20px;
+}
+
+
+    </style>
 </head>
 <body>
-    
     <div class="nav"><img class="svg" src="/hangimg.png">
-    <h1 class="he" style="color: orangered; font-style:oblique;">HANG<span style="color:black;">man</span></h1>
-    <div class="navdiv">
-        <p><a href="./main.html">HOME</a></p>
-        <p><a href="./about.html">ABOUT</a></p>
-        <p><a href="./instructions.html">INSTRUCTIONS</a></p>
+        <h1 class="he" style="color: orangered; font-style:oblique;">HANG<span style="color:black;">man</span></h1>
+        <div class="navdiv">
+          <p><a href="./index.html">HOME</a></p>
+          <p><a href="./about.html">ABOUT</a></p>
+          <p><a href="./instructions.html">INSTRUCTIONS</a></p>
+        </div>
       </div>
+
+    <div class="div2">
+        <h1 style="color: aliceblue;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">WELCOME TO HANGman!</h1>
+        <button style><a style="text-decoration: none; color: black;" href="./game.html" target="_blank">Start game!</a></button>
     </div>
-    
-    <div class="game-modal" style="display: none;">
-        <div class="content">
-            <img src="./lost.gif" alt="gif">
-            <h4>Game over!</h4>
-            <p>The correct word was: <b id="correct-word"></b></p>
-            <button class="play-again" onclick="playAgain()">Play again!</button>
-        </div>
+    <img class="bigimg" src="./han.png">
+    <div class="footer">
+      Copyright © 2024 |<a href="./about.html" style="color: aliceblue;">ABOUT</a>
     </div>
+    <br><p style="color: aliceblue; margin-left: 400px;"><b style="color: black;">HANGman</b>is a word guessing game where one player tries to guess a secret word chosen by another player<br>The goal is to guess the word with as few mistakes as possible. The fewer mistakes, the higher the score. </p> 
 
-
-    <div class="game-modal victory-modal" style="display: none;">
-        <div class="content">
-            <img src="./victory.gif" alt="Victory GIF">
-            <h4>Congratulations!</h4>
-            <p>You guessed the word correctly!</p>
-            <button class="play-again" onclick="playAgain()">Play again!</button>
-        </div>
-    </div>
+</body> 
+</html> 
 
 
 
 
 
-    <div class="container">
-        <div class="hangman-box">
-            <h1>Hangman Game</h1>
-        </div> 
 
-        <div class="hangman_container">
-            <div class="hangman">
-                <div class="head"></div>
-                <div class="body"></div>
-                <div class="left_hand"></div>
-                <div class="right_hand"></div>
-                <div class="left_leg"></div>
-                <div class="right_leg"></div>
-            </div>
-        </div>
-    </div>
-   
-    <div class="container2">
-        <div class="game-box">
-            <ul class="word-display"></ul>
-            <h4 class="hint-text">
-                Hint: <b id="hint-text"></b>
-            </h4>
-            <h4 class="guesses-text">
-                Incorrect: <b id="incorrect-count">0/6</b>
-            </h4>
-            <div class="keyboard"></div>
-        </div>
-    </div>
 
-    <script>
-        // Hangman elements
-        let head = document.querySelector('.head');
-        let body = document.querySelector('.body');
-        let left_hand = document.querySelector('.left_hand');
-        let right_hand = document.querySelector('.right_hand');
-        let left_leg = document.querySelector('.left_leg');
-        let right_leg = document.querySelector('.right_leg');
 
-        // Word list
-        const wordList = [
-            { word: "guitar", hint: "A musical instrument with strings." },
-            { word: "mobile", hint: "A smart device we use to call." },
-            { word: "rainbow", hint: "It appears when we get rain." },
-            { word: "oxygen", hint: "A colorless, odorless gas." },
-            { word: "dog", hint: "It is a pet animal." },
-            { word: "house", hint: "Human dwelling." },
-            { word: "cup", hint: "Used to drink." },
-            { word: "dictionary", hint: "Used to know the meaning of a word." },
-            { word: "fridge", hint: "Used to cool things." },
-            { word: "camel", hint: "Guess the names of five letter animals" }
-        ];
 
-        const keyboardDiv = document.querySelector(".keyboard");
-        const gameModal = document.querySelector(".game-modal");
-        let currentWord, incorrectGuesses, maxIncorrectGuesses = 6;
 
-        const getRandomWord = () => {
-            const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
-            currentWord = word.toLowerCase();
-            incorrectGuesses = 0;
-            document.querySelector("#hint-text").innerText = hint;
-            document.querySelector(".word-display").innerHTML = currentWord.split("").map(() => `<li class="letter"></li>`).join("");
-            document.querySelector("#incorrect-count").innerText = `0/${maxIncorrectGuesses}`;
-            document.querySelector(".game-modal").style.display = 'none';
-            resetHangman();
-            createKeyboard();
-        };
 
-        const createKeyboard = () => {
-            keyboardDiv.innerHTML = "";
-            for (let i = 97; i <= 122; i++) {
-                const button = document.createElement("button");
-                button.innerText = String.fromCharCode(i);
-                button.addEventListener("click", (e) => initGame(e.target.innerText));
-                keyboardDiv.appendChild(button);
-            }
-        };
 
-        const initGame = (clickedLetter) => {
-            if (currentWord.includes(clickedLetter)) {
-                console.log(clickedLetter, "is in the word");
-                const letters = document.querySelectorAll(".letter");
-                currentWord.split("").forEach((letter, index) => {
-                    if (letter === clickedLetter) {
-                        letters[index].innerText = letter;
-                    }
-                });
-                checkWin();
-            } else {
-                console.log(clickedLetter, "is not in the word");
-                incorrectGuesses++;
-                updateHangman();
-                document.querySelector("#incorrect-count").innerText = `${incorrectGuesses}/${maxIncorrectGuesses}`;
-                if (incorrectGuesses === maxIncorrectGuesses) {
-                    endGame(false);
-                }
-            }
-        };
 
-        const updateHangman = () => {
-            if (incorrectGuesses === 1) head.style.display = "block";
-            else if (incorrectGuesses === 2) body.style.display = "block";
-            else if (incorrectGuesses === 3) left_hand.style.display = "block";
-            else if (incorrectGuesses === 4) right_hand.style.display = "block";
-            else if (incorrectGuesses === 5) left_leg.style.display = "block";
-            else if (incorrectGuesses === 6) right_leg.style.display = "block";
-        };
 
-        const resetHangman = () => {
-            head.style.display = "none";
-            body.style.display = "none";
-            left_hand.style.display = "none";
-            right_hand.style.display = "none";
-            left_leg.style.display = "none";
-            right_leg.style.display = "none";
-        };
-
-        const checkWin = () => {
-            const letters = document.querySelectorAll(".letter");
-            if ([...letters].every(letter => letter.innerText !== "")) {
-                endGame(true);
-            }
-        };
-
-        const endGame = (won) => {
-        const modal = won ? document.querySelector(".victory-modal") : document.querySelector(".game-modal");
-        modal.style.display = 'block';
-        document.querySelector("#correct-word").innerText = currentWord;
-        resetHangman();
-    };
-
-        const playAgain = () => {
-            document.querySelector(".victory-modal").style.display = 'none'; // Hide victory modal
-            document.querySelector(".game-modal").style.display = 'none'; 
-            getRandomWord();
-        };
-
-        // Start the game
-        getRandomWord();
-    </script>
-</body>
-</html>
