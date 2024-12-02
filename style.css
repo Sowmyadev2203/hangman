@@ -288,12 +288,6 @@ a{
 
 
 
-
-
-
-
-
-
 @media  (max-width: 768px)    {
   .container {
     flex-direction: column;
@@ -321,4 +315,97 @@ body{
   position: fixed;
   left:150px;
 }
+}
+/* For tablets and devices with width 768px or less */
+/* @media (max-width: 768px) {
+  .nav {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .nav h1 {
+      font-size: 20px;
+      margin: 10px 0;
+  }
+
+  .navdiv {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+  }
+
+  .navdiv p {
+      margin: 0 8px;
+  }
+
+  .container, .container2 {
+      flex-direction: column;
+      margin-top: 15px;
+  }
+
+  .hangman-box h1 {
+      font-size: 24px;
+  }
+
+  .word-display .letter {
+      font-size: 30px;
+      margin: 0 5px;
+  }
+
+  .keyboard button {
+      font-size: 16px;
+      padding: 8px;
+  }
+
+  .hint-text, .guesses-text {
+      font-size: 16px;
+  }
+} */
+
+/* For mobile devices with width 480px or less */
+@media (max-width: 480px) {
+  .nav {
+      padding: 10px;
+  }
+
+  .nav h1 {
+      font-size: 18px;
+  }
+
+  .navdiv {
+    display: flex;
+    flex-direction: column;
+    gap:1px;
+    margin-top: -10px;
+    margin-left: 260px;
+       }
+
+  .navdiv p {
+      margin: 5px 0;
+  }
+
+  .container, .container2 {
+      padding: 0;
+  }
+
+  .hangman-box h1 {
+      font-size: 20px;
+  }
+
+  .word-display .letter {
+      font-size: 25px;
+      margin: 0 4px;
+  }
+
+  .keyboard button {
+      font-size: 14px;
+      padding: 5px;
+  }
+
+  .hint-text, .guesses-text {
+      font-size: 14px;
+  }
+  .he{
+    margin-top:30px;
+  }
 }

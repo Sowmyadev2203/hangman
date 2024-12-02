@@ -80,12 +80,100 @@ a{
   border-radius: 5px;
   color: aliceblue;
 }
+
+
+/* tablet view */
+@media (max-width: 768px) {
+            .accordion {
+                margin: 20px 50px;
+                width: 90%;
+            }
+
+            .svg {
+                top: -10px;
+                width: 60px;
+                height: 40px;
+                margin-left: 30px;
+            }
+
+            .he {
+                top:16px;
+                left: 120px;
+                font-size: 24px;
+            }
+
+            .navdiv {
+                display: flex;
+                flex-direction:row;
+                align-items: center;
+                gap: 15px;
+                margin-left: 0;
+            }
+
+            .navdiv a {
+                font-size: 14px;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                margin-top: 20px;
+            }
+
+            .accordion-body {
+                font-size: 14px;
+            }
+        }
+/* mobile view*/
+        @media (max-width: 576px) {
+            .accordion {
+                margin: 20px 0;
+                width: 100%;
+            }
+
+            .svg {
+                top:-10px;
+                width: 50px;
+                height: 35px;
+                margin-left: 20px;
+            }
+
+            .he {
+                top: 16px;
+                left: 90px;
+                font-size: 18px;
+            }
+
+            .navdiv {
+                display: flex;
+                flex-direction:row;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .navdiv a {
+                font-size: 12px;
+            }
+
+            .accordion-body {
+                font-size: 12px;
+            }
+
+            .accordion-button {
+                font-size: 14px;
+            }
+
+            .about {
+                font-size: 18px;
+            }
+        }
+
     
    </style>
 </head>
 <body>
 
-  <div class="nav"><img class="svg" src="/hangimg.png">
+  <div class="nav"><img class="svg" src="./hangimg.png">
     <h1 class="he" style="color: orangered; font-style:oblique;">HANG<span style="color:black;">man</span></h1>
     <div class="navdiv">
         <p><a href="./index.html">HOME</a></p>

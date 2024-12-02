@@ -90,12 +90,124 @@ a{
   margin:  50px 0px 0px 600px;
   border-radius: 20px;
 }
+.p1{
+  margin-left: 400px;
+}
+
+  /* For mobile view (screen width 600px and below) */
+  @media only screen and (max-width: 600px) {
+    .he {
+      top:3px;
+      left: 30px;
+      font-size: 18px;  /* Make the title smaller on mobile */
+    }
+    .svg {
+      width: 60px;  /* Reduce the size of the SVG image */
+      height: 40px;
+      margin-left: 20px;
+      margin-top: 30px;
+    }
+    .nav {
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 7px;
+      padding: 10px;
+    }
+    .navdiv {
+      flex-direction: column;
+      gap: 10px;
+      margin-right: 0;
+      margin-left: auto;
+      justify-content: center;
+    }
+    .navdiv a {
+      font-size: 14px;  /* Reduce font size for smaller screens */
+      padding: 5px;
+    }
+    .footer {
+      margin: 15px 0px 30px;
+      font-size: 12px;
+      text-align:center;
+      margin-left: 100px;
+    }
+    .bigimg {
+      width: 250px;
+      height: 250px;
+      margin: 20px 60px auto;
+    }
+    .div2 {
+      padding: 10px;
+    }
+    button {
+      width: 100%;  /* Make button width 100% for better usability */
+      padding: 15px;
+    }
+    p {
+      font-size: 14px;  /* Smaller text size for mobile screens */
+      text-align: center;
+      margin: 0 10px;
+    }
+    .div2 h1{
+      font-size: 20px;
+    }
+  }
+
+  /* For tablet view (screen width between 601px and 1024px) */
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .he {
+      top: 9px;
+      left: 140px;
+      font-size: 24px;  /* Slightly larger text size for tablets */
+    }
+    .svg {
+      width: 75px;  /* Adjust size of SVG image for tablets */
+      height: 45px;
+      margin-left: 40px;
+    }
+    .nav {
+      height: 70px;
+      margin-bottom: 20px;
+    }
+    .navdiv {
+      flex-direction: row;
+      /* justify-content: center; */
+      gap: 20px;
+    }
+    .navdiv a {
+      font-size: 16px;  /* Adjust font size for tablets */
+    }
+    .footer {
+      margin: 20px auto;
+      text-align: center;
+      margin-left: 250px;
+    }
+    .bigimg {
+      width: 280px;
+      height: 280px;
+      margin: 30px auto;
+      margin-left: 230px;
+    }
+    button {
+      width: 200px;
+      padding: 12px;
+    }
+    .p1 {
+      font-size: 16px;  /* Adjust text size for tablet */
+      text-align: center;
+     
+    }
+    
+  }
+
+
+
 
 
     </style>
 </head>
 <body>
-    <div class="nav"><img class="svg" src="/hangimg.png">
+    <div class="nav"><img class="svg" src="./hangimg.png">
         <h1 class="he" style="color: orangered; font-style:oblique;">HANG<span style="color:black;">man</span></h1>
         <div class="navdiv">
           <p><a href="./index.html">HOME</a></p>
@@ -112,7 +224,7 @@ a{
     <div class="footer">
       Copyright © 2024 |<a href="./about.html" style="color: aliceblue;">ABOUT</a>
     </div>
-    <br><p style="color: aliceblue; margin-left: 400px;"><b style="color: black;">HANGman</b>is a word guessing game where one player tries to guess a secret word chosen by another player<br>The goal is to guess the word with as few mistakes as possible. The fewer mistakes, the higher the score. </p> 
+    <br><p style="color: aliceblue;" class="p1"><b style="color: black;">HANGman</b>is a word guessing game where one player tries to guess a secret word chosen by another player<br>The goal is to guess the word with as few mistakes as possible. The fewer mistakes, the higher the score. </p> 
 
 </body> 
 </html> 

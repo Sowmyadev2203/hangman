@@ -99,17 +99,230 @@ a{
   color: aliceblue;
   font-size: 30px;
 }
+    /* Default Styles (Desktop) */
+    /* .he {
+        position: absolute;
+        top: -6px;
+        left: 170px;
+    }
+
+    .svg {
+        position: absolute;
+        top: 10px;
+        height: 50px;
+        width: 90px;
+        margin-left: 50px;
+        border: 2px solid black;
+        border-radius: 50px;
+    }
+
+    .nav {
+        height: 60px;
+        width: 100%;
+        background-color: white;
+        margin-bottom: 30px;
+        margin-left: auto;
+        border-radius: 7px;
+    }
+
+    body {
+        padding: 0 10px;
+        min-height: 100vh;
+        background: linear-gradient(45deg, hsla(214, 92%, 47%, 1) 30%, hsla(231, 85%, 24%, 1) 87%);
+    }
+
+    button {
+        border-radius: 10px;
+        padding: 10px;
+        width: 150px;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .div2 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navdiv {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: right;
+        margin-left: 1100px;
+        align-items: end;
+        margin-right: 30px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .navdiv a:hover {
+        background: linear-gradient(45deg, hsla(214, 92%, 47%, 1) 30%, hsla(231, 85%, 24%, 1) 87%);
+        padding: 6px;
+        border-radius: 5px;
+        color: aliceblue;
+    }
+
+    .imgdiv img {
+        height: 60%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        margin: 0px 0px 0px 240px;
+        border-radius: 40px;
+    }
+
+    .imgdiv p {
+        text-align: center;
+        color: aliceblue;
+        font-size: 30px;
+    }
+
+    h1, h3 {
+        color: aliceblue;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    h5 {
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: orangered;
+        filter: drop-shadow(0 0 20px black);
+    } */
+
+    /* Mobile Styles */
+    @media (max-width: 767px) {
+        .svg {
+            top: 5px;
+            height: 40px;
+            width: 70px;
+            margin-left: 30px;
+        }
+
+        .he {
+            top:13px;
+            left: 120px;
+            font-size: 20px;
+        }
+
+        .navdiv {
+            flex-direction:row;
+            margin-left: 230px;
+            margin-right: 20px;
+            gap: 20px;
+        }
+
+        .navdiv p {
+            font-size: 8px;
+        }
+
+        .div2 {
+            padding: 10px;
+        }
+
+        .imgdiv img {
+            width: 90%;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .imgdiv p {
+            font-size: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        h5 {
+            font-size: 24px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .nav {
+            height: 50px;
+        }
+    }
+
+    /* Tablet Styles */
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .svg {
+            top: 10px;
+            height: 50px;
+            width: 90px;
+            margin-left: 40px;
+        }
+
+        .he {
+            top:20px;
+            left: 140px;
+            font-size: 22px;
+        }
+
+        .navdiv {
+           margin: 20px 0px 0px 300px;
+            gap: 40px;
+        }
+
+        .imgdiv img {
+            width: 70%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .imgdiv p {
+            font-size: 25px;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        h3 {
+            font-size: 22px;
+        }
+
+        h5 {
+            font-size: 26px;
+        }
+
+        button {
+            width: 130px;
+        }
+    }
+
+
 
 
     </style>
 </head>
 <body>
-    <div class="nav"><img class="svg" src="/hangimg.png">
+    <div class="nav"><img class="svg" src="./hangimg.png">
         <h1 class="he" style="color: orangered; font-style:oblique;">HANG<span style="color:black;">man</span></h1>
         <div class="navdiv">
-          <p><a href="./index.html">HOME</a></p>
-          <p><a href="./about.html">ABOUT</a></p>
-          <p><a href="./instructions.html">INSTRUCTIONS</a></p>
+          <p><b><a href="./index.html">HOME</a></b></p>
+          <p><b><a href="./about.html">ABOUT</a></b></p>
+          <p><b><a href="./instructions.html">INSTRUCTIONS</a></b></p>
         </div>
       </div>
       
